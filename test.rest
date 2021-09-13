@@ -1,0 +1,12 @@
+get  http://localhost:8080/books
+###
+POST http://localhost:8080/books
+Content-Type: application/jspn
+
+{
+ "title":  "book title",
+ "imgUrl":  "book title",
+ "description":  "book title",
+ "status":  "book title",
+ "email":  "book title",
+}
