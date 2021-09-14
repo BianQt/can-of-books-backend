@@ -15,7 +15,7 @@ const createBook = (req, res) => {
     });
     newBook.save();
   
-    response.json(newBook);
+    res.json(newBook);
   };
 
  

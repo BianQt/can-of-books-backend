@@ -14,7 +14,7 @@ const PORT = process.env.PORT;
 const mongoUrl = process.env.MONGO_URL;
 const dbName = process.env.DB_NAME;
 
-mongoose.connect(`${mongoUrl}${dbName}`);
+mongoose.connect(`${mongoUrl}`);
 const bookShelf = require("./helpers/books.shelf");
 const {getBooks, createBook, deleteBook} = require("./controllers/books.controller");
 
