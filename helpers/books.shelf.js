@@ -7,7 +7,7 @@ const bookShelf = ()=>{
 const book1 = new Book({
   title: "The Autobiography of Malcolm X",
   imgUrl:
-    "https://target.scene7.com/is/image/Target/GUEST_6bd5c285-7c98-4c6e-b0bc-153e540738e6?fmt=webp&wid=1400&qlt=80",
+    "https://images-na.ssl-images-amazon.com/images/I/51K6Bsvbn6L._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
   description:
     "In the searing pages of this classic autobiography, originally published in 1964, Malcolm X, the Muslim leader, firebrand, and anti-integrationist, tells the extraordinary story of his life and the growth of the Black Muslim movement. His fascinating perspective on the lies and limitations of the American Dream, and the inherent racism in a society that denies its nonwhite citizens the opportunity to dream, gives extraordinary insight into the most urgent issues of our own time. The Autobiography of Malcolm X stands as the definitive statement of a movement and a man whose work was never completed but whose message is timeless. It is essential reading for anyone who wants to understand America.",
   status: "Available",

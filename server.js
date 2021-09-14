@@ -16,7 +16,7 @@ const dbName = process.env.DB_NAME;
 
 mongoose.connect(`${mongoUrl}`);
 const bookShelf = require("./helpers/books.shelf");
-const {getBooks, createBook, deleteBook} = require("./controllers/books.controller");
+const {getBooks, createBook, deleteBook, updateBook} = require("./controllers/books.controller");
 
 app.get("/", (req, res) => {
   res.send("Hello");
@@ -25,6 +25,7 @@ app.get("/", (req, res) => {
 app.get("/books", getBooks);
 app.post('/books', createBook);
 app.delete('/books/:book_id', deleteBook); 
+app.put('/books/:book_id', updateBook);
 
 //To save the books just once.
 app.get("/shelf", (req, res) => {
