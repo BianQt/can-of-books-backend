@@ -1,9 +1,12 @@
 "use strict";
 const Book = require("../models/books.model");
-
+const { req, res } = require('express');
 const getBooks = (req, res) => {
-  Book.find((err, foundBooks) => {
+
+  Book.find({email: req.params.email },(err, foundBooks) => {
+
     console.log(foundBooks);
+    
     res.json(foundBooks);
   });
 };
@@ -30,4 +33,18 @@ const deleteBook = (req, res) => {
     res.json(deleteBook);
   });
 };
-module.exports = {getBooks, creatBook, deleteBook};
+
+const updateBook=(req,res )=>{
+
+  const {title, imgUrl, description,status,email}  =req.body
+
+
+  const bookIdentity = req.params.book_id;
+
+
+  bookModel.findByIdAndUpdate ({_id:bookIdentity},{title,imgUrl,description,status,email},{new:true},(error,updatedBook )=> { 
+    res.json(updatedBook);
+  });
+  };
+  
+module.exports = {getBooks, creatBook, deleteBook, updateBook};
